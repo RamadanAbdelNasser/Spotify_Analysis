@@ -4,4 +4,4 @@ plotly.express
 streamlit
 wordcloud
 matplotlib
-altair==4.*
+nbformat
