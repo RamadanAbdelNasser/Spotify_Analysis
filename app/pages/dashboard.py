@@ -19,7 +19,7 @@ explicit_filter = st.sidebar.multiselect( 'explicit',
 
 mode_filter = st.sidebar.multiselect(label= 'Mode',
                              options= df['mode'].unique(),
-                             default= df['mode'].unique()
+                             default= df['mode'].unique(),
                              )
 
 energy_filter = st.sidebar.slider( 'Energy',
