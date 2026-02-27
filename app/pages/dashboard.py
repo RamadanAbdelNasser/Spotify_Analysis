@@ -207,13 +207,13 @@ Top_7_most_loud_songs_fig = px.histogram(df_sorted_by_most_loud_songs,x='track_n
 Top_7_most_dance_artists_fig = px.pie(df_sorted_by_most_dance_artists,names='artists',values='danceability',color='danceability',color_discrete_sequence= colors)
 
 
-row_0_col_1, row_0_col_2 = st.columns( 2, border = False )
+row_0_col_1, row_0_col_2 = st.columns( 2 )
 
-row_1_col_1, row_1_col_2 = st.columns( 2, border = True )
+row_1_col_1, row_1_col_2 = st.columns( 2 )
 row_1_col_1.plotly_chart(Top_10_most_popular_tracks_fig)
 row_1_col_2.plotly_chart(Top_10_most_popular_songs_artists_fig  )
 
-row_2_col_1, row_2_col_2 = st.columns(2, border= True)
+row_2_col_1, row_2_col_2 = st.columns(2)
 row_2_col_1.plotly_chart(Top_7_most_loud_songs_fig)
 row_2_col_2.plotly_chart(Top_7_most_dance_artists_fig)
 
