@@ -22,12 +22,17 @@ mode_filter = st.sidebar.multiselect(label= 'Mode',
                              default= df['mode'].unique(),
                              )
 
-energy_filter = st.sidebar.slider( 'Energy',
-                                  min_value= df['energy'].min(),
-                                  max_value= df['energy'].max()
-                                  )
+# energy_filter = st.sidebar.slider( 'Energy',
+#                                   min_value= df['energy'].min(),
+#                                   max_value= df['energy'].max()
+#                                   )
 
-
+energy_filter = st.sidebar.slider(
+    'Energy',
+    min_value=float(df['energy'].min()),
+    max_value=float(df['energy'].max()),
+    value=float(df['energy'].min())  # optional default value
+)
 
 filtered_df =df.query(' explicit == @explicit_filter and mode == @mode_filter and energy >= @energy_filter' )
 
