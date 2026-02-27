@@ -4,4 +4,4 @@ plotly.express
 streamlit
 wordcloud
 matplotlib
-altair.vegalite.v4
+altair==4.*
